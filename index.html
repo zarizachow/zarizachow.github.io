@@ -8,21 +8,20 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- NAVIGATION: to add a menu item, copy one <li> and change the link and label -->
+<!-- NAVIGATION: same menu is on resume.html. Edit both files if you change it. -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#about">Zariza Chowdhury</a>
+    <a class="brand" href="index.html#about">Zariza Chowdhury</a>
     <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">Menu</button>
     <nav id="menu">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Key Projects</a></li>
-        <li><a href="#events">Corporate Events</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="btn" href="documents/CV.pdf" download="Zariza_Chowdhury_CV.pdf">Download Resume</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
       </ul>
     </nav>
   </div>
@@ -36,78 +35,100 @@
   <div>
     <h1>Zariza Chowdhury</h1>
     <p class="title">Business Analyst | Data &amp; Commercial Analytics</p>
-    <p class="lead">I turn commercial and customer data into clear plans that sales, marketing, finance and technology teams can act on.</p>
-    <p>I am an analyst with experience across telecommunications, commercial performance, product management, business intelligence and data analytics. I have worked with sales, marketing, customer experience, finance and technology teams to turn business questions into analysis and practical recommendations. My work covers pricing, revenue analysis, performance reporting, dashboards and product launches. I combine business understanding with SQL, Python, Tableau, Power BI and Excel to help teams make better decisions.</p>
-    <p class="links"><a href="https://www.linkedin.com/in/zarizachowdhury" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/zarizachow" target="_blank" rel="noopener">GitHub</a><a class="btn" href="documents/CV.pdf" download="Zariza_Chowdhury_CV.pdf">Download Resume</a></p>
+    <p class="lead">I turn commercial and customer data into clear plans that business teams can act on.</p>
+    <p>I am an analyst with experience across telecommunications, commercial performance, product management, business intelligence and data analytics. I have worked with product, sales, marketing, customer experience, finance and technology teams to turn business questions into analysis and practical recommendations. My work covers pricing, revenue analysis, performance reporting, dashboards and product launches. I combine business understanding with SQL, Python, Tableau, Power BI and Excel to help teams make better decisions.</p>
+    <p class="links"><a class="btn" href="https://www.linkedin.com/in/zarizachowdhury" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="documents/CV.pdf" download="Zariza_Chowdhury_CV.pdf">Download Resume</a></p>
   </div>
 </section>
 
-<!-- EXPERIENCE: copy one <article class="entry"> block to add a job -->
+<!-- EXPERIENCE
+  Each card = one job. The small box shows on the page; the <div class="more"> shows in the popup.
+  To add a job: copy a whole <article class="card"> block and give it a new unique id. -->
 <section id="experience">
   <h2>Experience</h2>
+  <div class="grid">
 
-  <article class="entry">
-    <div class="meta">Sep 2022 – Oct 2023<br>Dhaka, Bangladesh</div>
-    <div>
-      <h3>Product Manager, Postpaid</h3>
-      <p class="org">Robi Axiata PLC, second largest telecom operator in Bangladesh. Promoted Apr 2023.</p>
-      <p>Owned the postpaid business unit (about BDT 42m a year) and its commercial performance, from analysis and pricing through to launch and tracking.</p>
-      <ul>
-        <li>Planned and launched products and campaigns end to end: segmentation, competitor analysis, marketing, IT integration and UAT with customer experience, then post-launch tracking.</li>
-        <li>Worked with sales on go-to-market, including retail launch, distributor alignment, revenue tracking and review of retailer plans.</li>
-        <li>Set up and ran product and retention campaigns in the CRM with marketing, sales, tech, risk and compliance, and finance.</li>
-        <li>Set pricing and launched voice and data products, lifting yearly postpaid revenue by 12.4%.</li>
-        <li>Designed segmented retention campaigns that cut quarterly churn by 18.2%.</li>
-        <li>Built forecasting models for launches and activities, and reporting used in executive performance reviews.</li>
-      </ul>
-      <p class="tools">SQL, CRM, forecasting, Tableau, Excel</p>
-      <p class="rel">Related project: <a href="#robi-pm">Postpaid pricing, launch and retention</a> →</p>
-    </div>
-  </article>
+    <article class="card" id="e-robi-pm">
+      <div class="head">
+        <h3>Product Manager, Postpaid</h3>
+        <p class="org"><a href="https://www.robi.com.bd" target="_blank" rel="noopener">Robi Axiata</a> · Dhaka · Sep 2022 – Oct 2023</p>
+      </div>
+      <p class="brief">Owned the postpaid unit's commercial performance, from pricing and launches to retention.</p>
+      <button class="more-btn" data-open="e-robi-pm">Details <span>+</span></button>
+      <div class="more" hidden>
+        <p>Owned the postpaid business unit (about BDT 42m a year) and its commercial performance, from analysis and pricing through to launch and tracking.</p>
+        <ul>
+          <li>Planned and launched products and campaigns end to end: segmentation, competitor analysis, marketing, IT integration and UAT with customer experience, then post-launch tracking.</li>
+          <li>Worked with sales on go-to-market, including retail launch, distributor alignment, revenue tracking and review of retailer plans.</li>
+          <li>Set up and ran product and retention campaigns in the CRM with marketing, sales, tech, risk and compliance, and finance.</li>
+          <li>Set pricing and launched voice and data products, lifting yearly postpaid revenue by 12.4%.</li>
+          <li>Designed segmented retention campaigns that cut quarterly churn by 18.2%.</li>
+          <li>Built forecasting models for launches and activities, and reporting used in executive performance reviews.</li>
+        </ul>
+        <p class="tools">Tools: SQL, CRM, forecasting, Excel</p>
+        <p class="rel">Related project: <a href="#p-robi-pm" data-open="p-robi-pm">Postpaid pricing, launch and retention →</a></p>
+      </div>
+    </article>
 
-  <article class="entry">
-    <div class="meta">Apr 2021 – Sep 2022<br>Dhaka, Bangladesh</div>
-    <div>
-      <h3>Business Analyst</h3>
-      <p class="org">Robi Axiata PLC</p>
-      <p>Supported the Product &amp; Pricing and Enterprise (B2B) teams, using SQL on customer and revenue data to find growth opportunities and check campaign profitability.</p>
-      <ul>
-        <li>Built a Tableau dashboard with role-based access for daily, weekly and monthly performance tracking. It became the first screen teams opened each morning.</li>
-        <li>Automated recurring performance reports on Oracle, cutting manual work and showing process gaps in Tableau.</li>
-        <li>Automated commission payroll for key account managers, saving 2 hours a week and removing calculation errors, giving finance a consistent, auditable process.</li>
-        <li>Worked with the predictive analytics team on a commission forecast model for budget planning.</li>
-        <li>Documented requirements, handed over data models and dashboards, and trained users to run them.</li>
-      </ul>
-      <p class="tools">SQL, Oracle, Tableau, Power BI, Excel</p>
-      <p class="rel">Related projects:
-        <a href="#democratisation">Company-wide Data Democratisation</a> ·
-        <a href="#dashboard">Enterprise Performance Dashboard</a> ·
-        <a href="#commission">Automated Commission Reporting</a> →</p>
-    </div>
-  </article>
+    <article class="card" id="e-robi-ba">
+      <div class="head">
+        <h3>Business Analyst</h3>
+        <p class="org"><a href="https://www.robi.com.bd" target="_blank" rel="noopener">Robi Axiata</a> · Dhaka · Apr 2021 – Sep 2022</p>
+      </div>
+      <p class="brief">Dashboards, reporting automation and SQL analysis for the Product &amp; Pricing and Enterprise teams.</p>
+      <button class="more-btn" data-open="e-robi-ba">Details <span>+</span></button>
+      <div class="more" hidden>
+        <p>Supported the Product &amp; Pricing and Enterprise (B2B) teams, using SQL on customer and revenue data to find growth opportunities and check campaign profitability.</p>
+        <ul>
+          <li>Built a Tableau dashboard with role-based access for daily, weekly and monthly performance tracking. It became the first screen teams opened each morning.</li>
+          <li>Automated recurring performance reports on Oracle, cutting manual work and showing process gaps in Tableau.</li>
+          <li>Tracked campaign and project KPIs and gave stakeholders data-backed insights and recommendations.</li>
+          <li>Automated commission payroll for key account managers, saving 2 hours a week and removing calculation errors, giving finance a consistent, auditable process.</li>
+          <li>Worked with the predictive analytics team on a commission forecast model for budget planning.</li>
+          <li>Documented requirements, handed over data models and dashboards, and trained users to run them.</li>
+        </ul>
+        <p class="tools">Tools: SQL, Oracle, Tableau, Power BI, Excel</p>
+        <p class="rel">Related projects:
+          <a href="#democratisation" data-open="democratisation">Data Democratisation</a> ·
+          <a href="#dashboard" data-open="dashboard">Enterprise Performance Dashboard</a> ·
+          <a href="#commission" data-open="commission">Automated Commission Reporting</a></p>
+      </div>
+    </article>
 
-  <article class="entry">
-    <div class="meta">Oct 2020 – Mar 2021<br>Dhaka, Bangladesh</div>
-    <div>
-      <h3>Business Insights and Research Analyst</h3>
-      <p class="org">Upskill Dhaka, ed-tech startup</p>
-      <ul>
-        <li>Co-authored a winning tender with two startups to run Grameenphone's startup accelerator program, and owned the budget, value proposition and proposal.</li>
-        <li>Turned competitor, consumer and market data into structured Excel reports for leadership planning.</li>
-        <li>Managed budgets, timelines and stakeholders across several projects at once.</li>
-      </ul>
-      <p class="rel">Related project: <a href="#upskill">Accelerator program tender</a> →</p>
-    </div>
-  </article>
+    <article class="card" id="e-upskill">
+      <div class="head">
+        <h3>Business Insights and Research Analyst</h3>
+        <!-- Add the company website here as a link if you want one -->
+        <p class="org">Upskill Dhaka · Dhaka · Oct 2020 – Mar 2021</p>
+      </div>
+      <p class="brief">Market and competitor research for leadership planning, plus a winning accelerator tender.</p>
+      <button class="more-btn" data-open="e-upskill">Details <span>+</span></button>
+      <div class="more" hidden>
+        <ul>
+          <li>Co-authored a winning tender with two startups to run Grameenphone's startup accelerator program, and owned the budget, value proposition and proposal.</li>
+          <li>Turned competitor, consumer and market data into structured Excel reports that gave leadership a clear base for strategic planning.</li>
+          <li>Managed budgets, timelines and stakeholders across several projects at once.</li>
+        </ul>
+        <p class="rel">Related project: <a href="#upskill-tender" data-open="upskill-tender">Accelerator program tender →</a></p>
+      </div>
+    </article>
 
-  <article class="entry">
-    <div class="meta">Mar 2024 – Jan 2025<br>Sydney, Australia</div>
-    <div>
-      <h3>Sales Associate</h3>
-      <p class="org">Uniqlo Australia</p>
-      <p>Served customers and kept fitting rooms, checkout and store standards in order. Processed deliveries and managed stock. Took a rotating turn as shop floor lead, overseeing the floor and team and handling customer issues.</p>
-    </div>
-  </article>
+    <article class="card" id="e-uniqlo">
+      <div class="head">
+        <h3>Sales Associate</h3>
+        <p class="org"><a href="https://www.uniqlo.com/au/" target="_blank" rel="noopener">Uniqlo Australia</a> · Sydney · Mar 2024 – Jan 2025</p>
+      </div>
+      <p class="brief">Customer service, stock and store standards, with shop floor lead shifts.</p>
+      <button class="more-btn" data-open="e-uniqlo">Details <span>+</span></button>
+      <div class="more" hidden>
+        <ul>
+          <li>Acted as shop floor lead, overseeing the floor and team and handling customer issues during those shifts.</li>
+          <li>Served customers on the shop floor and kept fitting rooms, checkout and store standards in order.</li>
+          <li>Processed deliveries and managed stock and back of house.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
 
   <h4 class="sub">Additional experience</h4>
   <ul class="plain">
@@ -119,158 +140,225 @@
   </ul>
 </section>
 
-<!-- EDUCATION -->
+<!-- EDUCATION
+  Diploma images: replace assets/images/diploma-masters.jpg and diploma-bachelors.jpg.
+  Transcripts: replace documents/transcript-masters.pdf and transcript-bachelors.pdf. -->
 <section id="education">
   <h2>Education</h2>
   <article class="entry">
     <div class="meta">Sep 2025 – Jun 2026<br>Vienna, Austria</div>
     <div>
       <h3>Master of Science in Business Analytics</h3>
-      <p class="org">Central European University</p>
+      <p class="org"><a href="https://www.ceu.edu" target="_blank" rel="noopener">Central European University</a></p>
       <p>Graduated with distinction. Scholarship and stipend recipient.</p>
-      <p class="rel">↳ <a href="#capstone">View Master's Capstone Project</a></p>
+      <p class="rel">↳ <a href="#capstone" data-open="capstone">View Master's Capstone Project</a></p>
+    </div>
+    <div class="docs">
+      <button class="thumb nosave" data-zoom="assets/images/diploma-masters.jpg" data-alt="Master's diploma" aria-label="Enlarge Master's diploma"><img src="assets/images/diploma-masters.jpg" alt="Master's diploma" draggable="false"></button>
+      <a class="tiny" href="documents/transcript-masters.pdf" download>Download transcript</a>
     </div>
   </article>
   <article class="entry">
     <div class="meta">Aug 2017 – May 2020<br>Chittagong, Bangladesh</div>
     <div>
       <h3>Bachelor of Arts in Economics</h3>
-      <p class="org">Asian University for Women</p>
+      <p class="org"><a href="https://www.auw.edu.bd" target="_blank" rel="noopener">Asian University for Women</a></p>
       <p>Graduated cum laude. Minors in Mathematics and Finance. AUW Support Foundation academic scholarship recipient.</p>
-      <p class="rel">↳ <a href="#thesis">Undergraduate thesis on climate-induced migration</a> · <a href="#rohingya">Research on perceptions of the Rohingya influx</a></p>
+      <p class="rel">↳ <a href="#thesis" data-open="thesis">Undergraduate thesis on climate-induced migration</a> · <a href="#rohingya" data-open="rohingya">Research on perceptions of the Rohingya influx</a></p>
+    </div>
+    <div class="docs">
+      <button class="thumb nosave" data-zoom="assets/images/diploma-bachelors.jpg" data-alt="Bachelor's diploma" aria-label="Enlarge Bachelor's diploma"><img src="assets/images/diploma-bachelors.jpg" alt="Bachelor's diploma" draggable="false"></button>
+      <a class="tiny" href="documents/transcript-bachelors.pdf" download>Download transcript</a>
     </div>
   </article>
 </section>
 
-<!-- KEY PROJECTS: copy one <article class="case"> block to add a project. The id must match the link used elsewhere. -->
+<!-- PROJECTS: same card structure as experience. Add a new project by copying a card and giving it a new unique id. -->
 <section id="projects">
-  <h2>Key Projects</h2>
+  <h2>Projects</h2>
+  <div class="grid">
 
-  <article class="case" id="capstone">
-    <p class="cat">Commercial &amp; Pricing Analytics · Predictive Analytics</p>
-    <h3>Competitor Pricing Database and Churn Prediction</h3>
-    <p class="org">MSc Capstone with Magenta Telekom, second largest telecom operator in Austria · Vienna · Mar – Jun 2026</p>
-    <dl>
-      <dt>Business problem</dt><dd>Magenta wanted a clearer view of how its prices compare with competitors, and whether price gaps affect customer churn.</dd>
-      <dt>Approach</dt><dd>Collected competitor prices from public websites using AI-assisted scraping and built a query-ready database for repeatable analysis. Built an interactive dashboard comparing pricing trends by operator and product tier. Built an experimental linear regression model to test whether competitor price gaps affected next month's churn.</dd>
-      <dt>Outcome</dt><dd>Identified positioning gaps across the Austrian market. Documented the process so Magenta's analytics team can add the new variables to their existing churn model. The regression model was experimental.</dd>
-      <dt>Tools</dt><dd>Python (Jupyter Notebook), Excel, AI-assisted web scraping, linear regression, Tableau</dd>
-    </dl>
-    <p class="rel">Linked to: <a href="#education">MSc Business Analytics</a></p>
-  </article>
+    <article class="card" id="capstone">
+      <div class="head">
+        <p class="cat">Commercial &amp; Pricing Analytics · Predictive Analytics</p>
+        <h3>Competitor Pricing Database and Churn Prediction</h3>
+        <p class="org">MSc Capstone with <a href="https://www.magenta.at" target="_blank" rel="noopener">Magenta Telekom</a> · Vienna · Mar – Jun 2026</p>
+      </div>
+      <p class="brief">Mapped competitor pricing in Austria and tested whether price gaps affect churn.</p>
+      <button class="more-btn" data-open="capstone">Details <span>+</span></button>
+      <div class="more" hidden>
+        <dl>
+          <dt>Business problem</dt><dd>Magenta wanted a clearer view of how its prices compare with competitors, and whether price gaps affect customer churn.</dd>
+          <dt>Approach</dt><dd>Collected competitor prices from public websites using AI-assisted scraping and built a query-ready database for repeatable analysis. Built an interactive dashboard comparing pricing trends by operator and product tier. Built an experimental linear regression model to test whether competitor price gaps affected next month's churn.</dd>
+          <dt>Outcome</dt><dd>Identified positioning gaps across the Austrian market. Documented the process so Magenta's analytics team can add the new variables to their existing churn model. The regression model was experimental.</dd>
+          <dt>Tools</dt><dd>Python (Jupyter Notebook), Excel, AI-assisted web scraping, linear regression, Tableau</dd>
+        </dl>
+        <p class="rel">Linked to: MSc Business Analytics, Central European University</p>
+      </div>
+    </article>
 
-  <article class="case" id="robi-pm">
-    <p class="cat">Commercial &amp; Pricing Analytics</p>
-    <h3>Postpaid Pricing, Launch and Retention</h3>
-    <p class="org">Robi Axiata PLC · Dhaka · Sep 2022 – Oct 2023</p>
-    <dl>
-      <dt>Context</dt><dd>As Product Manager I owned the postpaid unit and its commercial results.</dd>
-      <dt>My role</dt><dd>Set pricing for voice and data products and ran launches from segmentation and competitor analysis through IT integration, UAT and post-launch tracking. Designed segmented retention campaigns run in the CRM. Built forecasting models to estimate the benefit of launches and activities.</dd>
-      <dt>Outcome</dt><dd>Yearly postpaid revenue up 12.4%. Quarterly churn down 18.2%. Reporting used in executive performance reviews.</dd>
-      <dt>Tools</dt><dd>SQL, CRM, forecasting, Excel</dd>
-    </dl>
-    <p class="rel">Linked to: <a href="#experience">Product Manager, Postpaid</a></p>
-  </article>
+    <article class="card" id="p-robi-pm">
+      <div class="head">
+        <p class="cat">Commercial &amp; Pricing Analytics</p>
+        <h3>Postpaid Pricing, Launch and Retention</h3>
+        <p class="org">Robi Axiata · Dhaka · Sep 2022 – Oct 2023</p>
+      </div>
+      <p class="brief">Pricing, launches and retention campaigns for Robi's postpaid unit.</p>
+      <button class="more-btn" data-open="p-robi-pm">Details <span>+</span></button>
+      <div class="more" hidden>
+        <dl>
+          <dt>Context</dt><dd>As Product Manager I owned the postpaid unit and its commercial results.</dd>
+          <dt>My role</dt><dd>Set pricing for voice and data products and ran launches from segmentation and competitor analysis through IT integration, UAT and post-launch tracking. Designed segmented retention campaigns run in the CRM. Built forecasting models to estimate the benefit of launches and activities.</dd>
+          <dt>Outcome</dt><dd>Yearly postpaid revenue up 12.4%. Quarterly churn down 18.2%. Reporting used in executive performance reviews.</dd>
+          <dt>Tools</dt><dd>SQL, CRM, forecasting, Excel</dd>
+        </dl>
+        <p class="rel">Linked to: <a href="#e-robi-pm" data-open="e-robi-pm">Product Manager, Postpaid</a></p>
+      </div>
+    </article>
 
-  <article class="case" id="democratisation">
-    <p class="cat">Business Intelligence &amp; Data Analytics</p>
-    <h3>Company-wide Data Democratisation</h3>
-    <p class="org">Robi Axiata PLC · Dhaka · Jul – Dec 2021</p>
-    <dl>
-      <dt>Business problem</dt><dd>Business teams relied on the analytics team for routine requests, which left less time for projects and new initiatives.</dd>
-      <dt>My role</dt><dd>Led the project. Built 200+ Tableau dashboards and data marts with scheduled refreshes (robotic process automation). Trained business teams on Tableau to move them off manual Excel reporting.</dd>
-      <dt>Outcome</dt><dd>Less reliance on the analytics team for business-as-usual requests, lighter load on the enterprise data warehouse and fewer refresh backlogs.</dd>
-      <dt>Tools</dt><dd>Tableau, SQL, data marts, training</dd>
-    </dl>
-    <p class="rel">Linked to: <a href="#experience">Business Analyst, Robi</a></p>
-  </article>
+    <article class="card" id="democratisation">
+      <div class="head">
+        <p class="cat">Business Intelligence &amp; Data Analytics</p>
+        <h3>Company-wide Data Democratisation</h3>
+        <p class="org">Robi Axiata · Dhaka · Jul – Dec 2021</p>
+      </div>
+      <p class="brief">200+ Tableau dashboards and data marts so business teams could self-serve.</p>
+      <button class="more-btn" data-open="democratisation">Details <span>+</span></button>
+      <div class="more" hidden>
+        <dl>
+          <dt>Business problem</dt><dd>Business teams relied on the analytics team for routine requests, which left less time for projects and new initiatives.</dd>
+          <dt>My role</dt><dd>Led the project. Built 200+ Tableau dashboards and data marts with scheduled refreshes (robotic process automation). Trained business teams on Tableau to move them off manual Excel reporting.</dd>
+          <dt>Outcome</dt><dd>Less reliance on the analytics team for business-as-usual requests, lighter load on the enterprise data warehouse and fewer refresh backlogs.</dd>
+          <dt>Tools</dt><dd>Tableau, SQL, data marts, training</dd>
+        </dl>
+        <p class="rel">Linked to: <a href="#e-robi-ba" data-open="e-robi-ba">Business Analyst, Robi</a></p>
+      </div>
+    </article>
 
-  <article class="case" id="dashboard">
-    <p class="cat">Business Intelligence &amp; Data Analytics</p>
-    <h3>Enterprise (B2B) Performance Dashboard</h3>
-    <p class="org">Robi Axiata PLC · Dhaka · Oct – Dec 2021</p>
-    <dl>
-      <dt>Business problem</dt><dd>Enterprise leaders waited on manual reports to see how revenue and accounts were performing.</dd>
-      <dt>Solution</dt><dd>A Tableau dashboard with hierarchical security: managers see everything, team leads see their team, account managers see their own accounts. It tracks revenue, accounts, ARPU and average price per customer in one top-down view. Data sources were merged into a master source that refreshes the dashboard automatically.</dd>
-      <dt>Value</dt><dd>Leaders can spot issues without waiting for manual reports, and the time lag from manual refreshes is gone.</dd>
-      <dt>Tools</dt><dd>Tableau, Power BI, SQL, row-level security, KPI analysis</dd>
-    </dl>
-    <p class="rel">Linked to: <a href="#experience">Business Analyst, Robi</a></p>
-  </article>
+    <article class="card" id="dashboard">
+      <div class="head">
+        <p class="cat">Business Intelligence &amp; Data Analytics</p>
+        <h3>Enterprise (B2B) Performance Dashboard</h3>
+        <p class="org">Robi Axiata · Dhaka · Oct – Dec 2021</p>
+      </div>
+      <p class="brief">Top-down Tableau view of Enterprise revenue and accounts with role-based access.</p>
+      <button class="more-btn" data-open="dashboard">Details <span>+</span></button>
+      <div class="more" hidden>
+        <dl>
+          <dt>Business problem</dt><dd>Enterprise leaders waited on manual reports to see how revenue and accounts were performing.</dd>
+          <dt>Solution</dt><dd>A Tableau dashboard with hierarchical security: managers see everything, team leads see their team, account managers see their own accounts. It tracks revenue, accounts, ARPU and average price per customer in one top-down view. Data sources were merged into a master source that refreshes the dashboard automatically.</dd>
+          <dt>Value</dt><dd>Leaders can spot issues without waiting for manual reports, and the time lag from manual refreshes is gone.</dd>
+          <dt>Tools</dt><dd>Tableau, Power BI, SQL, row-level security, KPI analysis</dd>
+        </dl>
+        <p class="rel">Linked to: <a href="#e-robi-ba" data-open="e-robi-ba">Business Analyst, Robi</a></p>
+      </div>
+    </article>
 
-  <article class="case" id="commission">
-    <p class="cat">Business Intelligence &amp; Data Analytics</p>
-    <h3>Automated Commission Reporting for Key Account Managers</h3>
-    <p class="org">Robi Axiata PLC · Dhaka · Nov 2021</p>
-    <dl>
-      <dt>Business problem</dt><dd>Commission for Enterprise key account managers was calculated by hand, which was slow and prone to errors.</dd>
-      <dt>Solution</dt><dd>A single data source combining sales, client, usage and revenue metrics, an automated commission report, and a rolling dashboard so each account manager can see their commission through the month.</dd>
-      <dt>Outcome</dt><dd>Saved 2 hours a week, removed calculation errors and audit risk, and gave finance a consistent process.</dd>
-      <dt>Tools</dt><dd>SQL, Oracle, data modelling, report automation</dd>
-    </dl>
-    <p class="rel">Linked to: <a href="#experience">Business Analyst, Robi</a></p>
-  </article>
+    <article class="card" id="commission">
+      <div class="head">
+        <p class="cat">Business Intelligence &amp; Data Analytics</p>
+        <h3>Automated Commission Reporting</h3>
+        <p class="org">Robi Axiata · Dhaka · Nov 2021</p>
+      </div>
+      <p class="brief">Automated monthly commission report for Enterprise key account managers.</p>
+      <button class="more-btn" data-open="commission">Details <span>+</span></button>
+      <div class="more" hidden>
+        <dl>
+          <dt>Business problem</dt><dd>Commission for Enterprise key account managers was calculated by hand, which was slow and prone to errors.</dd>
+          <dt>Solution</dt><dd>A single data source combining sales, client, usage and revenue metrics, an automated commission report, and a rolling dashboard so each account manager can see their commission through the month.</dd>
+          <dt>Outcome</dt><dd>Saved 2 hours a week, removed calculation errors and audit risk, and gave finance a consistent process.</dd>
+          <dt>Tools</dt><dd>SQL, Oracle, data modelling, report automation</dd>
+        </dl>
+        <p class="rel">Linked to: <a href="#e-robi-ba" data-open="e-robi-ba">Business Analyst, Robi</a></p>
+      </div>
+    </article>
 
-  <article class="case" id="upskill">
-    <p class="cat">Business Research &amp; Strategy</p>
-    <h3>Grameenphone Startup Accelerator Tender</h3>
-    <p class="org">Upskill Dhaka · Oct 2020 – Mar 2021</p>
-    <dl>
-      <dt>Context</dt><dd>Upskill joined two other startups to bid to run Grameenphone's startup accelerator program.</dd>
-      <dt>My role</dt><dd>Co-authored the proposal and owned the budget and value proposition, using competitor, consumer and market data.</dd>
-      <dt>Outcome</dt><dd>The tender was won.</dd>
-    </dl>
-    <p class="rel">Linked to: <a href="#experience">Upskill Dhaka</a></p>
-  </article>
+    <article class="card" id="upskill-tender">
+      <div class="head">
+        <p class="cat">Business Research &amp; Strategy</p>
+        <h3>Grameenphone Startup Accelerator Tender</h3>
+        <p class="org">Upskill Dhaka · Oct 2020 – Mar 2021</p>
+      </div>
+      <p class="brief">Co-authored the winning tender to run Grameenphone's startup accelerator.</p>
+      <button class="more-btn" data-open="upskill-tender">Details <span>+</span></button>
+      <div class="more" hidden>
+        <dl>
+          <dt>Context</dt><dd>Upskill joined two other startups to bid to run Grameenphone's startup accelerator program.</dd>
+          <dt>My role</dt><dd>Co-authored the proposal and owned the budget and value proposition, using competitor, consumer and market data.</dd>
+          <dt>Outcome</dt><dd>The tender was won.</dd>
+        </dl>
+        <p class="rel">Linked to: <a href="#e-upskill" data-open="e-upskill">Business Insights and Research Analyst, Upskill</a></p>
+      </div>
+    </article>
 
-  <article class="case" id="ecommerce">
-    <p class="cat">Independent Project · Work in progress</p>
-    <h3>Brazilian E-commerce SQL Analytics Dashboard</h3>
-    <p class="org">Personal GitHub project</p>
-    <dl>
-      <dt>Description</dt><dd>A practice project using the Olist Brazilian e-commerce dataset, with SQL analysis in DuckDB and a dashboard.</dd>
-      <dt>Status</dt><dd>Work in progress. <a href="https://github.com/zarizachow/brazilian-ecommerce-sql-analytics-dashboard" target="_blank" rel="noopener">View on GitHub →</a></dd>
-    </dl>
-  </article>
+    <article class="card" id="ecommerce">
+      <div class="head">
+        <p class="cat">Independent Project · Work in progress</p>
+        <h3>Brazilian E-commerce Analytics</h3>
+        <p class="org">Personal project</p>
+      </div>
+      <p class="brief">SQL analysis of Brazilian e-commerce data with a dashboard. Work in progress.</p>
+      <button class="more-btn" data-open="ecommerce">Details <span>+</span></button>
+      <div class="more" hidden>
+        <dl>
+          <dt>Description</dt><dd>A practice project using the Olist Brazilian e-commerce dataset, with SQL analysis in DuckDB and a dashboard.</dd>
+          <dt>Status</dt><dd>Work in progress.</dd>
+        </dl>
+      </div>
+    </article>
 
-  <article class="case" id="thesis">
-    <p class="cat">Academic Research</p>
-    <h3>Climate-Induced Rural-Urban Migration: Rickshaw-Pullers</h3>
-    <p class="org">Senior thesis, Asian University for Women · Jan – May 2020</p>
-    <dl>
-      <dt>Research question</dt><dd>What are the socioeconomic impacts of climate-induced rural-urban migration on rickshaw-pullers in Chittagong city?</dd>
-      <dt>Method</dt><dd>Questionnaire surveys and interviews with 35 participants, selected by snowball sampling.</dd>
-    </dl>
-    <p class="rel">Linked to: <a href="#education">BA Economics</a></p>
-  </article>
+    <article class="card" id="thesis">
+      <div class="head">
+        <p class="cat">Academic Research</p>
+        <h3>Climate-Induced Rural-Urban Migration</h3>
+        <p class="org">Senior thesis, Asian University for Women · Jan – May 2020</p>
+      </div>
+      <p class="brief">Survey and interview study of 35 rickshaw-pullers in Chittagong.</p>
+      <button class="more-btn" data-open="thesis">Details <span>+</span></button>
+      <div class="more" hidden>
+        <dl>
+          <dt>Research question</dt><dd>What are the socioeconomic impacts of climate-induced rural-urban migration on rickshaw-pullers in Chittagong city?</dd>
+          <dt>Method</dt><dd>Questionnaire surveys and interviews with 35 participants, selected by snowball sampling.</dd>
+        </dl>
+        <p class="rel">Linked to: BA Economics, Asian University for Women</p>
+      </div>
+    </article>
 
-  <article class="case" id="rohingya">
-    <p class="cat">Academic Research</p>
-    <h3>Public Perception of the Rohingya Influx in Chittagong Division</h3>
-    <p class="org">Undergraduate summer research, Asian University for Women · Apr – Nov 2018</p>
-    <dl>
-      <dt>Method</dt><dd>Collected qualitative data from 200 random participants in Chittagong city and Cox's Bazar, analysed it and compiled the research report.</dd>
-    </dl>
-    <p class="rel">Linked to: <a href="#education">BA Economics</a></p>
-  </article>
+    <article class="card" id="rohingya">
+      <div class="head">
+        <p class="cat">Academic Research</p>
+        <h3>Public Perception of the Rohingya Influx</h3>
+        <p class="org">Summer research, Asian University for Women · Apr – Nov 2018</p>
+      </div>
+      <p class="brief">Qualitative study of 200 residents' views in Chittagong Division.</p>
+      <button class="more-btn" data-open="rohingya">Details <span>+</span></button>
+      <div class="more" hidden>
+        <dl>
+          <dt>Method</dt><dd>Collected qualitative data from 200 random participants in Chittagong city and Cox's Bazar, analysed it and compiled the research report.</dd>
+        </dl>
+        <p class="rel">Linked to: BA Economics, Asian University for Women</p>
+      </div>
+    </article>
+  </div>
 </section>
 
-<!-- CORPORATE EVENTS: copy one <article class="entry"> block to add an event -->
+<!-- CORPORATE EVENTS: bullets sit inside <details> and open with the small arrow -->
 <section id="events">
   <h2>Corporate Events</h2>
-  <p class="intro">Events at Robi Axiata Limited, Dhaka, alongside my analytical work.</p>
 
   <article class="entry">
     <div class="meta">2022<br>Dhaka</div>
     <div>
       <h3>Robi Datathon 2.0</h3>
       <p class="org">National data science competition powered by AWS and Huawei, 2,800+ candidates from 11 countries</p>
-      <ul>
-        <li>Led a key part of the event.</li>
-        <li>Met data scientists, professors and industry leaders to invite them to judge.</li>
-        <li>Chaired the closing ceremony and led a team of 20+ organisers, plus vendors, logistics and venue.</li>
-        <li>Worked with regulatory, corporate affairs and PR teams. The chief guest was the Minister of Posts, Telecommunications and Information Technology.</li>
-      </ul>
+      <details><summary>Details</summary>
+        <ul>
+          <li>Led a key part of the event.</li>
+          <li>Met data scientists, professors and industry leaders to invite them to judge.</li>
+          <li>Chaired the closing ceremony and led a team of 20+ organisers, plus vendors, logistics and venue.</li>
+          <li>Worked with regulatory, corporate affairs and PR teams. The chief guest was the Minister of Posts, Telecommunications and Information Technology.</li>
+        </ul>
+      </details>
     </div>
   </article>
 
@@ -279,10 +367,12 @@
     <div>
       <h3>Strategy Retreat</h3>
       <p class="org">Three-day executive planning event where senior teams presented company-wide strategy to the leadership team</p>
-      <ul>
-        <li>Provided data and dashboarding support in both years, so teams had the numbers they needed.</li>
-        <li>Co-hosted the event and co-led a team of 10+ organisers covering event flow and audience engagement.</li>
-      </ul>
+      <details><summary>Details</summary>
+        <ul>
+          <li>Provided data and dashboarding support in both years, so teams had the numbers they needed.</li>
+          <li>Co-hosted the event and co-led a team of 10+ organisers covering event flow and audience engagement.</li>
+        </ul>
+      </details>
     </div>
   </article>
 
@@ -291,10 +381,12 @@
     <div>
       <h3>League of Reds</h3>
       <p class="org">Graduate trainee recruitment assessment centre (business simulations and case competitions)</p>
-      <ul>
-        <li>Co-hosted the assessment centre round.</li>
-        <li>Handled logistics for the assessment rounds and cultural show. Lead photographer in 2022.</li>
-      </ul>
+      <details><summary>Details</summary>
+        <ul>
+          <li>Co-hosted the assessment centre round.</li>
+          <li>Handled logistics for the assessment rounds and cultural show. Lead photographer in 2022.</li>
+        </ul>
+      </details>
     </div>
   </article>
 </section>
@@ -306,13 +398,17 @@
   <p class="links">
     <a href="mailto:zarizah.chowdhury@gmail.com">zarizah.chowdhury@gmail.com</a>
     <a href="https://www.linkedin.com/in/zarizachowdhury" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/zarizachow" target="_blank" rel="noopener">GitHub</a>
     <a class="btn" href="documents/CV.pdf" download="Zariza_Chowdhury_CV.pdf">Download Resume</a>
   </p>
 </section>
 </main>
 
 <footer class="wrap foot">© <span id="year">2026</span> Zariza Chowdhury</footer>
+
+<!-- Popups (filled by script.js) -->
+<dialog id="modal"><button class="x" data-close aria-label="Close">×</button><div id="modalBody" class="modal-body"></div></dialog>
+<dialog id="lightbox" class="nosave"><button class="x" data-close aria-label="Close">×</button><img id="lightImg" alt="" draggable="false"></dialog>
+
 <script src="script.js"></script>
 </body>
 </html>
